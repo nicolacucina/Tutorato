@@ -6,7 +6,7 @@
 // 3. Stampa con puntatore e indici;
 // 4. Stampa con array e aritmetica dei puntatori;
 // 5. Con puntatore, aritmetica dei puntatori e incrementando il puntatore al posto dell'indice
-
+// 
 #include <stdio.h>
 
 int parte_1(int array[], int size){
