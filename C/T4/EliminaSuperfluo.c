@@ -22,12 +22,15 @@ void input_utente(int array[], int n){
 }
 
 int controlla_ripetizioni(int array[], int n, int numero){
+<<<<<<< HEAD
     /*
     La funzione controlla se un numero è già presente all'interno dell'array
     Se il numero è presente, all'interno del ciclo for la condizione array[i] == numero sarà vera almeno una volta,
     cambiando il valore di contatore ad 1.
     Se il numero non è presente, il valore di contatore rimarrà 0.
     */
+=======
+>>>>>>> 9be8b87d9b424911ebd02053026406bd34ac624f
     int contatore = 0;
     for(int i = 0; i < n; i++){
         if(array[i] == numero){
@@ -53,6 +56,7 @@ int main(){
     scanf("%d", &n);
     
     int input_array[n];
+<<<<<<< HEAD
 
     // Gestisco l'input dell'utente in una funzione a parte
     input_utente(input_array, n);
@@ -62,11 +66,17 @@ int main(){
     a quella dell'array di input, posso utilizzare la dimensione n come dimensione dell'array finale.
     Inizializzo tutti gli elementi dell'array finale a 0, in modo da poterli scartare successivamente.
     */
+=======
+    input_utente(input_array, n);
+
+    // Inizializzazione soluzione
+>>>>>>> 9be8b87d9b424911ebd02053026406bd34ac624f
     int array_finale[n];
     for (int i = 0; i < n; i++){
         array_finale[i] = 0;
     }
     
+<<<<<<< HEAD
     for (int i = 0; i < n; i++){
         /*
         Abbiamo scritto una funzione controlla_ripetizioni che ci permette di verificare se un numero è già presente
@@ -86,6 +96,13 @@ int main(){
 
         if(input_array[i] != 0 && (controlla_ripetizioni(array_finale, n, input_array[i]) == 0)){
             array_finale[i] = input_array[i];
+=======
+    int indice = 0;
+    for (int i = 0; i < n; i++){
+        if(input_array[i] != 0 && (controlla_ripetizioni(array_finale, n, input_array[i]) == 0)){
+            array_finale[indice] = input_array[i];
+            indice++;
+>>>>>>> 9be8b87d9b424911ebd02053026406bd34ac624f
         }
     }
 

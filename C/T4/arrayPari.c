@@ -1,8 +1,16 @@
 /*
+<<<<<<< HEAD
 Scrivere due funzioni C che ricevono come parametro un array di interi a e la sua dimensione size(deve essere pari). 
 Nello specifico, la prima funzione deve restituire 1 se tutti gli elementi dell'array sono numeri pari, 
 mentre la seconda funzione deve restituire 1 se almeno la metà dei valori nell’array sono pari. 
 Scrivere poi un programma che richiede all’utente di inserire un array di interi e testa le due funzioni.
+=======
+Scrivere due funzioni C che ricevono come parametro un array di interi e la sua dimensione (deve essere pari). 
+Nello specifico, la prima funzione deve𝑎 𝑠𝑖𝑧𝑒
+restituire 1 se tutti gli elementi dell'array sono numeri pari, mentre la seconda funzione deve
+restituire 1 se almeno la metà dei valori nell’array sono pari. Scrivere poi un programma che
+richiede all’utente di inserire un array di interi e testa le due funzioni.
+>>>>>>> 9be8b87d9b424911ebd02053026406bd34ac624f
 Esempio per Funzione 1.
 Input 1 : [1, 2, 3, 4, 5] test = False;
 Input 2 : [2, 4, 6, 8] test = True
@@ -27,10 +35,13 @@ void input_utente(int array[], int n){
 }
 
 int tutti_pari(int array[], int n){
+<<<<<<< HEAD
     // Dato che basta un singolo valore dispari affinchè l'array non contenga solo numeri pari,
     // cerco un singolo valore dispari e se lo trovo mi fermo.
     // Se trovo solo valori pari, la variabile "pari" rimane 1 e restituisco 1.
     // Se incontro un valore dispari, la variabile "pari" diventa 0, il ciclo si interrompe e restituisco 0.
+=======
+>>>>>>> 9be8b87d9b424911ebd02053026406bd34ac624f
     int pari = 1;
     for(int i = 0; i < n; i++){
         if(array[i] % 2 != 0){
@@ -42,8 +53,11 @@ int tutti_pari(int array[], int n){
 }
 
 int meta_pari(int array[], int n){
+<<<<<<< HEAD
     // In questo caso, per sapere se almeno la metà dei valori dell'array sono pari, prima devo scorrete tutto l'array
     // e contare quanti valori pari ci sono, poi potrò fare un confronto e decidere se restituire 1 oppure 0.
+=======
+>>>>>>> 9be8b87d9b424911ebd02053026406bd34ac624f
     int contatore = 0;
     for(int i = 0; i < n; i++){
         if(array[i] % 2 == 0){

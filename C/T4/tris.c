@@ -17,13 +17,18 @@ void inizializza_griglia(int griglia[][3]){
     }
 }
 
+<<<<<<< HEAD
 void input_giocatore(int griglia[][3], int giocatore){
     int riga, colonna;
     // Chiediamo all'utente di fornire riga e colonna di dove vuole posizionare il simbolo
+=======
+void input_giocatore(int griglia[][3], int giocatore, int riga, int colonna){
+>>>>>>> 9be8b87d9b424911ebd02053026406bd34ac624f
     printf("Giocatore %d, inserisci la riga: ", giocatore);
     scanf("%d", &riga);
     printf("Giocatore %d, inserisci la colonna: ", giocatore);
     scanf("%d", &colonna);
+<<<<<<< HEAD
 
     // Controlliamo se la mossa scelta può essere effettuata. Nella cella scelta dobbiamo trovare uno 0.
     // Se la cella è già occupata, l'utente deve riprovare.
@@ -34,6 +39,15 @@ void input_giocatore(int griglia[][3], int giocatore){
     // } else {
     //     griglia[riga][colonna] = giocatore;
     // }
+=======
+    int riprova=0;
+    if (griglia[riga][colonna] != 0){
+        printf("Cella gia' occupata, riprova\n");
+        riprova=1;
+    } else {
+        griglia[riga][colonna] = giocatore;
+    }
+>>>>>>> 9be8b87d9b424911ebd02053026406bd34ac624f
     while (riprova==1){
         printf("Giocatore %d, inserisci la riga: ", giocatore);
         scanf("%d", &riga);
@@ -42,7 +56,10 @@ void input_giocatore(int griglia[][3], int giocatore){
         if (griglia[riga][colonna] != 0){
             printf("Cella gia' occupata, riprova\n");
         } else {
+<<<<<<< HEAD
             // Se finiamo in questo blocco, la cella conteneva uno 0 e quindi possiamo inserire il simbolo del giocatore
+=======
+>>>>>>> 9be8b87d9b424911ebd02053026406bd34ac624f
             griglia[riga][colonna] = giocatore;
             riprova=0;
         }
@@ -50,10 +67,13 @@ void input_giocatore(int griglia[][3], int giocatore){
 }
 
 int controlla_vittoria(int griglia[][3]){
+<<<<<<< HEAD
     // Vengono controllate tutte le righe, colonne e diagonali per vedere se c'è un vincitore.
     // Se viene trovata una combinazione vincente, viene restituito il giocatore che ha vinto.
     // Avendo controllato tutte le combinazioni, se non c'è un vincitore viene restituito 0.
 
+=======
+>>>>>>> 9be8b87d9b424911ebd02053026406bd34ac624f
     // Controllo righe
     for(int i = 0; i < 3; i++){
         if(griglia[i][0] != 0 && griglia[i][0] == griglia[i][1] && griglia[i][1] == griglia[i][2]){
@@ -86,16 +106,23 @@ void stampa_griglia(int griglia[][3]){
 }
 
 int main(){
+<<<<<<< HEAD
     // Inizializzazione delle variabili necessarie
     int griglia[3][3];
     // La griglia di gioco viene inizialmente riempita con zeri per indicare che nessuna cella è stata occupata
     inizializza_griglia(griglia);
 
     // Variabili di supporto che utilizziamo per tenere traccia dello stato del gioco
+=======
+    int griglia[3][3];
+    inizializza_griglia(griglia);
+
+>>>>>>> 9be8b87d9b424911ebd02053026406bd34ac624f
     int giocatore = 1;
     int partita_finita = 0;
     int vincitore = 0;
     
+<<<<<<< HEAD
     // All'interno del ciclo while abbiamo i vari turni di gioco
     while(partita_finita == 0){
         // La prima cosa da fare è visualizzare la griglia di gioco per consentire al giocatore di fare la sua mossa
@@ -108,6 +135,13 @@ int main(){
         vincitore = controlla_vittoria(griglia);
 
         // Se il metodo controlla_vittoria restituisce un valore diverso da 0, c'è un vincitore e la partita termina
+=======
+    int riga, colonna;
+    while(partita_finita == 0){
+        stampa_griglia(griglia);
+        input_giocatore(griglia, giocatore, riga, colonna);
+        vincitore = controlla_vittoria(griglia);
+>>>>>>> 9be8b87d9b424911ebd02053026406bd34ac624f
         if(vincitore != 0){
             partita_finita = 1;
         } else {
@@ -118,7 +152,10 @@ int main(){
             }
         }
     }
+<<<<<<< HEAD
     // Se si esce dal ciclo while, la partita è terminata e viene visualizzata la griglia finale
+=======
+>>>>>>> 9be8b87d9b424911ebd02053026406bd34ac624f
     stampa_griglia(griglia);
     if(vincitore == 1){
         printf("Ha vinto il giocatore 1\n");
