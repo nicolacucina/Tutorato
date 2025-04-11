@@ -42,7 +42,6 @@ public class Razza {
     }
 
     public String toString() {
-        return "Razza: " + nome + ", Forza: " + forza + ", Intelligenza: " + intelligenza +
-               ", Destrezza: " + destrezza + ", Saggezza: " + saggezza + ", Fortuna: " + fortuna;
+        return "Razza di Default";
     }
 }

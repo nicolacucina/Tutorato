@@ -19,8 +19,9 @@ public class Personaggio {
         this.classe = classe;
         this.livello = 1; // Livello iniziale
         this.forza = razza.getForza() + classe.getForza();
-        this.intelligenza = razza.getIntelligenza() + classe.getIntelligenza();
         this.destrezza = razza.getDestrezza() + classe.getDestrezza();
+        System.out.println(razza.getDestrezza() + " " + classe.getDestrezza());
+        this.intelligenza = razza.getIntelligenza() + classe.getIntelligenza();
         this.saggezza = razza.getSaggezza() + classe.getSaggezza();
         this.fortuna = razza.getFortuna() + classe.getFortuna();
     }
@@ -100,15 +101,15 @@ public class Personaggio {
     public String toString() {
         return "Personaggio: " + nome + ", Razza: " + razza.getNome() + ", Classe: " + classe.getNome() +
                ", Livello: " + livello + ", Forza: " + forza + ", Intelligenza: " + intelligenza +
-               ", Destrezza: " + destrezza + ", Saggezza: " + saggezza + ", Fortuna: " + fortuna;
+                ", Destrezza: " + destrezza + ", Saggezza: " + saggezza + ", Fortuna: " + fortuna;
     }
 
     public void aumentaLivello() {
-
+        this.classe.aumentaLivello(this);
     }
 
     public void aumentaLivello(int i){
-
+        this.classe.aumentaLivello(this, i);
     }
 
 }

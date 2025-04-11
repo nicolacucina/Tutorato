@@ -17,6 +17,12 @@ public class Elfo extends Razza {
     }
 
     public String toString() {
-        return super.toString() + ", Tratti: " + String.join(", ", tratti) + ", Descrizione: Gli elfi sono un popolo magico di grazia ultraterrena, che vive nel mondo ma non ne fa interamente parte";
+        String s = "";
+        s += "Descrizione: Gli elfi sono un popolo magico di grazia ultraterrena, che vive nel mondo ma non ne fa interamente parte";
+        s += ". Tratti: \n";
+        for(int i = 0; i < tratti.length; i++){
+            s += tratti[i] + ", ";
+        }
+        return s;
     }
 }

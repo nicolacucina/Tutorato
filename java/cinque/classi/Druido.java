@@ -5,20 +5,23 @@ import cinque.personaggi.Personaggio;
 public class Druido extends Classe{
 
     public Druido(){
-        super(-1, 2, 0, 2, 0);
-
+        super(-1, 2, 0, 2, 0); // settiamo le statistiche come nell'esempio
+        setNome("Druido"); // erediamo il metodo dalla classe genitore Classe
     }
-
+    
+    /* 
+     * Nell'esempio non è specificato come fare l'aumento di livello per la sola classe Druido, 
+     * quindi non vengono incrementate le statistiche
+    */ 
     public void aumentaLivello(Personaggio personaggio){
-        personaggio.setLivello(personaggio.getLivello() + 1);
-        personaggio.setForza(personaggio.getForza() + 2);
-        personaggio.setDestrezza(personaggio.getDestrezza() + 2);
+        super.aumentaLivello(personaggio);
     }
 
     public void aumentaLivello(Personaggio personaggio, int livello){
-        personaggio.setLivello(personaggio.getLivello() + livello);
-        personaggio.setForza(personaggio.getForza() + 2 * livello);
-        personaggio.setDestrezza(personaggio.getDestrezza() + 2 * livello);
+        super.aumentaLivello(personaggio, livello);
     }
     
+    public String toString() {
+        return "I druidi venerano soprattutto la natura, ottenendo i loro incantesimi e altri poteri magici dalla forza della natura.";
+    }
 }
